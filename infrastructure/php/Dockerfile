@@ -8,8 +8,11 @@ RUN apt-get -y upgrade
 RUN apt-get -y install libpng-dev
 RUN apt-get -y install zlib1g-dev
 
+# PDO client for PHP
+RUN docker-php-ext-install pdo_mysql
 # mysqli client for PHP
 RUN docker-php-ext-install mysqli
+
 RUN docker-php-ext-install gd
 
 
